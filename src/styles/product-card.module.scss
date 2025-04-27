@@ -1,0 +1,35 @@
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  text-align: center;
+  width: 300px;
+
+  img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: black;
+  }
+
+  .price {
+    color: #2e7d32;
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+
+  a {
+    text-decoration: none; 
+    color: inherit;
+  }
+
+  &:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+}

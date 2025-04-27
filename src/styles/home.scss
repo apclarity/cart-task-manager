@@ -1,0 +1,74 @@
+:root {
+  --primary-box-color: #3bc60396;
+  --primary-box-text: #fff;
+  
+  --padding : 10px;
+  --border-rad: 10px;
+  --shadow: 4px 3px 19px 0px rgba(0,0,0,0.3);
+}
+
+$primary-box-colors: #7996ff;
+$primary-box-color-darker: darken($primary-box-colors, 10%); 
+
+h1 {
+    font-size: 3.5rem;
+    color: #fff;
+  }
+
+  h2{
+    margin-top: -15px;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  grid-gap: 20px;
+  padding: 30px;
+  font-family: sans-serif;
+
+  div:hover {
+    box-shadow: none;
+  }
+}
+
+%box-shape {
+  padding: var(--padding);
+  border-radius: var(--border-rad);
+  box-shadow: var(--shadow);
+}
+
+.button-1, .button-2 {
+  @extend %box-shape;
+  background-color: var(--primary-box-color);
+  color: var(--primary-box-text);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: none;
+
+  &:hover {
+    box-shadow: var(--shadow);
+    opacity: 50%;
+  }
+}
+
+.button-2 {
+  background-color: $primary-box-color-darker;
+}
+
