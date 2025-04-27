@@ -15,7 +15,7 @@ const Register = () => {
   });
   const navigate = useNavigate();
 
-  const { mutate, status, error } = useMutation({
+  const { mutate, status } = useMutation({
     mutationFn: async (data: RegisterInput) => {
       const response = await axiosInstance.post("/register", data);
       return response.data;
@@ -56,7 +56,7 @@ const Register = () => {
         </button>
 
         {status === "error" && <p className="text-error">Error, please try again.</p>}
-        
+
         <p>Already have an account?</p>
         <button type="button" className="login-btn" onClick={()=> navigate("/login")}>
             Login
