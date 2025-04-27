@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Button from "../components/Button";
+import Input from "../components/Input";
 
 type TaskFormProps = {
   onAdd: (title: string) => void;
@@ -17,13 +19,12 @@ const TaskForm = ({ onAdd }: TaskFormProps) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
+      <Input
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         placeholder="Add new task"
       />
-      <button type="submit">Add Task</button>
+      <Button type="submit" variant="primary">Add Task</Button>
     </form>
   );
 };

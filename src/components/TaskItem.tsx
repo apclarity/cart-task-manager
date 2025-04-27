@@ -1,3 +1,5 @@
+import "../styles/task.scss"
+
 type TaskItemProps = {
   task: {
     id: number;
@@ -10,17 +12,15 @@ type TaskItemProps = {
 
 const TaskItem = ({ task, onToggle, onDelete }: TaskItemProps) => {
   return (
-    <div >
-      <div>
+    <div className="task-item">
         <input
           type="checkbox"
           checked={task.completed}
           onChange={onToggle}
         />
-        <span>
+        <span className={task.completed ? "completed" : ""}>
           {task.title}
         </span>
-      </div>
       <button onClick={onDelete}>Delete</button>
     </div>
   );

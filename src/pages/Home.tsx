@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Button from "../components/Button";
 import '../styles/home.scss'
 
 const Home = () => {
@@ -8,8 +8,8 @@ const Home = () => {
       <h1>Welcome!</h1>
       <h2>Please select activity</h2>
       <div className="wrapper">
-        <Link className="button-1" to="/products">Products</Link> 
-        <Link className="button-2" to="/tasks">Tasks</Link> 
+        <Button to="/products" variant="primary">Products</Button>
+        <Button to="/tasks" variant="secondary">Tasks</Button>
       </div>
     </div>
   );
